@@ -1,34 +1,39 @@
-# Predicting Employee Attrition Using Machine Learning
+# Employee Attrition Analysis
 
-## Project Overview
-This project aims to predict employee departures using machine learning. The dataset consists of 300,000 employee records, including features such as gender, distance to the office, salary changes, and performance reviews. The analysis includes data visualization, feature selection, and model training.
-
-## Dataset
-- Source: [Dataset Link](https://raw.githubusercontent.com/msaricaumbc/DS_data/master/ds602/midterm/employee_departure_dataset.csv)
-- Contains employee demographics, salary trends, and review ratings.
-- The target variable is "Left" (1 = Employee Left, 0 = Employee Stayed).
+## Overview
+This project analyzes employee attrition using data-driven techniques. The goal is to identify key factors influencing employee turnover and provide insights to improve retention strategies.
 
 ## Features
-- **Gender**: Male or Female
-- **Distance**: Distance from home to the office
-- **YearsWorked**: Total years an employee has worked
-- **Previous Salary & Current Salary**: Compensation trends
-- **Reviews**: Employee and supervisor feedback scores
-
-## Steps in the Project
-1. Data Cleaning and Preprocessing
-2. Exploratory Data Analysis (EDA)
-3. Handling Imbalanced Data
-4. Feature Engineering
-5. Model Selection and Training
-6. Model Evaluation and Performance Metrics
+- **Data Preprocessing**: Cleans and preprocesses employee data for analysis.
+- **Exploratory Data Analysis (EDA)**: Provides insights through visualizations and statistical summaries.
+- **Machine Learning Models**: Applies classification models to predict employee attrition.
+- **Model Evaluation**: Assesses model performance using accuracy, precision, recall, and other metrics.
 
 ## Technologies Used
-- Python (Pandas, NumPy, Scikit-Learn, Matplotlib)
+- Python
 - Jupyter Notebook
-- Machine Learning (Logistic Regression, Decision Trees, Random Forest)
+- Pandas & NumPy
+- Matplotlib & Seaborn
+- Scikit-Learn
 
-## Results & Insights
-- Significant impact of **distance to the office** on employee retention.
-- Imbalanced dataset: More employees stay than leave.
-- Initial model evaluation determines whether categorical variables need encoding.
+## Usage
+- Run the notebook step by step to preprocess data, perform EDA, and train models.
+- Modify hyperparameters to improve model performance.
+- Use visualizations to derive insights from the data.
+- Conclusions
+
+## Model Conclusion
+Both Decision Tree and Random Forest classifiers were effective in predicting which employees were most likely to leave the company, each offering distinct advantages. The Decision Tree model excels in interpretability and has high recall for identifying employees at risk of leaving. Meanwhile, Random Forest provides more robust generalizability with a slightly reduced feature set. For this project, Random Forest is the better option due to its scalability and efficiency.
+
+Random Forest has consistently performed better.
+
+## Project Outcomes
+Supervisor Engagement: The ML model analysis highlighted SupervisorReview as a top feature influencing whether employees stay or leave. Higher supervisor ratings were associated with greater retention, emphasizing the importance of positive supervisory relationships.
+
+Stress Management: StressLevel emerged as a significant predictor in both models. Employees with higher stress levels were more likely to leave, indicating a need for stress management strategies to improve retention.
+
+Salary and Growth: Salary and Salary_Percentage_Increase were among the most influential features in predicting turnover. Lower salary increases correlated with higher turnover, supporting the importance of competitive pay progression.
+
+Department-Specific Retention Efforts: DepartmentCode was another critical feature, with some departments exhibiting significantly lower turnover rates. Identifying and replicating high-retention department strategies can improve overall employee retention.
+
+Employee Wellbeing: The engineered feature JobMentalWellbeing, which combines satisfaction, engagement, and peer feedback scores, strongly influenced retention. Focusing on mental wellbeing can significantly reduce turnover rates.
